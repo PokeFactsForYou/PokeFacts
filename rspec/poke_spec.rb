@@ -1,18 +1,20 @@
+require_relative '../spec/spec_helper'
+
 describe 'an array of Pokemon Facts' do
 
       pokeFacts = PokeFacts.new
       testFacts = PokeFacts.new
 
-      it 'has PokeFacts' do
+      it 'contains PokeFacts' do
         expect(pokeFacts.pokeFactsArray.size).not_to eq(0)
       end
 
-      it 'has the same size' do
+      it 'contains the proper size' do
         expect(pokeFacts.pokeFactsArray.size).to eq(35)
       end
 
-      it 'has elements in the same order' do
-        expect(pokeFacts.pokeFactsArray).to eq(testFacts.pokeFactsArray)
+      it 'returns elements in the same order' do
+        expect(pokeFacts.pokeFactsArray.sort).to eq(testFacts.pokeFactsArray.sort)
       end
 
       describe 'randomPokeFact' do

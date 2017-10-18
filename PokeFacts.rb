@@ -1,5 +1,3 @@
-require 'colorize'
-
 class PokeFacts
 
   attr_reader :pokeFactsArray
